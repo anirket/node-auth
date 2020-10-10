@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARK SPACE | Welcome</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+        integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+        <link rel="shortcut icon" href="#" />
+    <style>
+        body {
+            background-color: black;
+            height: 100vh;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Roboto', sans-serif;
+        }
+        button a{
+            text-decoration: none;
+            color: white;
+        }
+        
+
+        .container {
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%, -20%);
+        }
+
+        h3 {
+            color: tomato;
+            font-size: 3rem;
+            text-align: center;
+        }
+
+        p {
+            margin: 0 auto;
+            width: 70%;
+            line-height: 3rem;
+            margin-top: 2rem;
+        }
+
+        .name {
+            color: orangered;
+        }
+
+        .languages {
+            color: magenta;
+        }
+
+        footer {
+
+            font-size: 2rem;
+            margin: 0 auto;
+            width: 70%;
+
+            margin-top: 2rem;
+            
+
+        }
+
+        .log {
+            margin: 0 auto;
+            width: 70%;
+
+            margin-top: 2rem;
+
+        }
+
+        button {
+            outline: none;
+            cursor: pointer;
+            margin-right: 5rem;
+            margin-left: 1rem;
+            font-size: 1.5rem;
+            padding: 2rem;
+            color: white;
+            border: 2px solid green;
+            background: transparent;
+            border-radius: 40px;
+        }
+        button:hover{
+            background-color: green;
+            color: black;
+        }
+
+        /* mobile */
+        @media only screen and (max-width:600px) {
+            h3 {
+
+               
+                font-size: 2rem;
+                text-align: center;
+            }
+
+            p {
+                font-size: 0.9rem;
+
+                width: 100%;
+                line-height: 2rem;
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+            }
+
+
+            footer {
+
+                font-size: 1.3rem;
+                margin-top: 2rem;
+                margin-left: 6rem;
+            }
+
+            .log {
+       margin-left: -1rem;
+                display: flex;
+                margin: 0 auto;
+            }
+
+            button {
+                cursor: pointer;
+    
+                margin-left: 0rem;
+                font-size: 1rem;
+                padding: 1rem;
+                color: white;
+                border: 2px solid green;
+                background: transparent;
+                border-radius: 20px;
+            }
+
+        }
+        .feautre{
+            color: rgb(49, 236, 49);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h3>ARK SPACE</h3>
+        <p>
+            Hi There,
+            This is <span class="name">ANIKET KULKARNI</span> , this is a Test website for Login / Sign up form(<span class="feautre"> Passport-session validation using cookies </span>) using
+            <span class="languages">NODEJS + EXPRESS + MONGODB</span>. All templates are rendered dynamically using <span class="languages">EJS</span>.
+            The database is stored in Mongodb Atlas and all Password are encrypted using bcryptjs.<br> The dashboard route is encrypted and cannot be accessed without proper credentails.
+            <br>Thankyou For visting...
+        </p>
+        <div class="log">
+            
+            <a href="/users/login"><button>SIGN IN</button></a>
+            <a href="/users/register"><button>SIGN UP</button></a>
+ 
+        </div>
+        <footer>
+            Find me on : <a target="new" href="https://github.com/anirket/"><i class="fab fa-github"></i></a>
+        </footer>
+
+
+
+
+    </div>
+</body>
+
+</html>

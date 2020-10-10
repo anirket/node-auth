@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="#" />
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main h1 {
+            color: white;
+            text-transform: uppercase;
+            font-weight: 10000;
+
+
+
+        }
+
+        .main {
+            padding: 50px;
+            background: #191919;
+            width: 300px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 3%;
+            text-align: center;
+
+
+        }
+
+        #name,
+        #pass {
+            border: 0;
+            background: none;
+            display: block;
+
+            text-align: center;
+            margin: 20px auto;
+            border: 2px solid #3498db;
+            padding: 10px 10px;
+            width: 200px;
+            outline: none;
+            color: white;
+            border-radius: 24px;
+            transition: 1s;
+        }
+
+
+        #submit {
+            border: 0;
+            background: none;
+            display: block;
+
+            text-align: center;
+            margin: 20px auto;
+            border: 2px solid #2ecc71;
+            padding: 10px 10px;
+            width: 120px;
+            outline: none;
+            color: white;
+            border-radius: 24px;
+            transition: 1s;
+            cursor: pointer;
+        }
+
+        #submit:hover {
+            background: #2ecc71;
+        }
+
+        .errorfield {
+            font-size: 1.0rem;
+
+        }
+
+        .error {
+            color: #d9534f;
+            background-color: #dff0d8;
+            border-color: #d6e9c6;
+            padding: 15px;
+
+            border: 1px solid transparent;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form class="main" action="/users/register" method="POST">
+        <h1>REGISTER</h1>
+        <h3 class="errorfield">
+            <%- include("./partials/errormsg.ejs")  %>
+        </h3>
+        <input type="text" id="name" name="name" placeholder="name">
+        <input type="email" id="name" name="email" placeholder="email"
+            value="<% typeof email != 'undefined' ? email : '' %>">
+        <input type="password" id="pass" name="password" placeholder="password"
+            value="<% typeof email != 'undefined' ? password : '' %>">
+        <input type="password" id="pass" name="password2" placeholder="Confirm password"
+            value="<% typeof email != 'undefined' ? password2 : '' %>">
+        <input type="submit" id="submit" value="submit">
+        <h4 style="color: wheat;">Already have an account ? <a
+                style="text-decoration: none; color: grey; cursor: pointer;" href="/users/login">LOGIN</a></h4>
+        <h3><a style="text-decoration: none; color: grey; cursor: pointer;" href="/">GO BACK</a></h3>
+    </form>
+</body>
